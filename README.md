@@ -1,4 +1,4 @@
-[![Dependency Status][daviddm-image]]
+[![Dependency Status][daviddm-image]][daviddm-url] 
 
 # Javangular
 
