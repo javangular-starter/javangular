@@ -15,4 +15,5 @@ before_script:
 
 script:
   - ng build --prod --aot
-  - ng test
+  - npm run test-headless
+  - ng e2e
