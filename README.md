@@ -1,4 +1,5 @@
 [![Dependency Status][daviddm-image]][daviddm-url] 
+[![Build Status](https://travis-ci.com/javangular-starter/javangular.svg?branch=master)](https://travis-ci.com/javangular-starter/javangular)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=bugs)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
 [![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=code_smells)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
 [![Coverage](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=coverage)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
