@@ -1,4 +1,4 @@
-`https://javangular-starter.github.io`
+[https://javangular-starter.github.io](https://javangular-starter.github.io)
 
 
 [![Dependency Status][daviddm-image]][daviddm-url] 
@@ -11,7 +11,8 @@ This project was create to help developers to start a project using Angular 7+ a
 
 ## Docs
 
-Navigate to `https://javangular-starter.github.io/javangular/`. 
+Navigate to [Documentation](https://javangular-starter.github.io/javangular/). 
+
 
 ## Sonar Analysis
 
