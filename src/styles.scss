@@ -1,45 +1,49 @@
-@import '~normalize.css/normalize.css';
+@import '@javangular/scss/javangular';
 
-// Custom Theming for Angular Material
-// For more information: https://material.angular.io/guide/theming
-@import '~@angular/material/theming';
-// Plus imports for other components in your app.
-
-// Include the common styles for Angular Material. We include this here so that you only
-// have to load a single css file for Angular Material in your app.
-// Be sure that you only ever include this mixin once!
-@include mat-core();
-
-$jav-nav: (
-  50: #e7e9ea,
-  100: #c4c8cb,
-  200: #9da3a8,
-  300: #757e85,
-  400: #58626b,
-  500: #3a4651,
-  600: #343f4a,
-  700: #2c3740,
-  800: #252f37,
-  900: #182027,
-  A100: #6db6ff,
-  A200: #3a9cff,
-  A400: #0783ff,
-  A700: #0076ec,
+$jav-white: (
+  500: white,
   contrast: (
-    50: #000000,
-    100: #000000,
-    200: #000000,
-    300: #ffffff,
-    400: #ffffff,
-    500: #ffffff,
-    600: #ffffff,
-    700: #ffffff,
-    800: #ffffff,
-    900: #ffffff,
-    A100: #000000,
-    A200: #000000,
-    A400: #ffffff,
-    A700: #ffffff
+    500: $dark-primary-text
+  )
+);
+
+$jav-black: (
+  500: black,
+  contrast: (
+    500: $light-primary-text
+  )
+);
+
+$jav-navy: (
+  50: #ececee,
+  100: #c5c6cb,
+  200: #9ea1a9,
+  300: #7d818c,
+  400: #5c616f,
+  500: #3c4252,
+  600: #353a48,
+  700: #2d323e,
+  800: #262933,
+  900: #1e2129,
+  A100: #c5c6cb,
+  A200: #9ea1a9,
+  A400: #5c616f,
+  A700: #2d323e,
+  contrast: (
+    50: $dark-primary-text,
+    100: $dark-primary-text,
+    200: $dark-primary-text,
+    300: $light-primary-text,
+    400: $light-primary-text,
+    500: $light-primary-text,
+    600: $light-primary-text,
+    700: $light-primary-text,
+    800: $light-primary-text,
+    900: $light-primary-text,
+    A100: $dark-primary-text,
+    A200: $light-primary-text,
+    A400: $light-primary-text,
+    A700: $light-primary-text
   )
 );
 
@@ -76,38 +80,29 @@ $jav-green: (
   )
 );
 
-// Define the palettes for your theme using the Material Design palettes available in palette.scss
-// (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$javangular-primary: mat-palette($jav-nav);
+$javangular-primary: mat-palette($jav-navy);
 $javangular-accent: mat-palette($jav-green, A200, A100, A400);
-
-// The warn palette is optional (defaults to red).
 $javangular-warn: mat-palette($mat-red);
-
-// Create the theme object (a Sass map containing all of the palettes).
 $javangular-theme: mat-light-theme($javangular-primary, $javangular-accent, $javangular-warn);
-
-// Include theme styles for core and each component used in your app.
-// Alternatively, you can import and @include the theme mixins for each component
-// that you are using.
 @include angular-material-theme($javangular-theme);
-/* You can add global styles to this file, and also import other style files */
 
-@mixin colors {
-  $contrast: map-get($jav-nav, contrast);
+// color classes for primary, accent and warn colors
+$default-palettes: (
+  primary: $javangular-primary,
+  accent: $javangular-accent,
+  warn: $javangular-warn
+);
 
-  @each $name, $value in $jav-nav {
-    .bg-jav-#{$name} {
-      background: #{$value};
-      color: #fff !important;
-    }
-    @debug $name $value;
-  }
-}
+$custom_palettes: (
+  jav-white: $jav-white,
+  jav-black: $jav-black,
+  jav-navy: $jav-navy
+);
 
-@include colors;
+@include color-classes($default-palettes);
+@include color-classes($custom_palettes);
 
+// -----------------------------------------------------------------------------------
 html,
 body {
   height: 100%;

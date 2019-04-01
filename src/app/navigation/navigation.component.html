@@ -1,27 +1,26 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer
-               class="sidenav mat-elevation-z12 bg-jav-500"
+               class="sidenav mat-elevation-z12 jav-navy-400"
                fixedInViewport="true"
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(isHandset$ | async)">
-    <mat-toolbar color="primary">
+    <mat-toolbar class="jav-navy-400">
       <img class="logo"
            alt="javangular"
            src="assets/logo.svg" />
       <span class="logo-title">Javangular</span>
     </mat-toolbar>
-    <mat-nav-list class="bg-jav-500">
-      <a mat-list-item
-         href="#">Link 1</a>
-      <a mat-list-item
-         href="#">Link 2</a>
-      <a mat-list-item
-         href="#">Link 3</a>
+    <mat-nav-list>
+      <mat-list-item>
+        <mat-icon mat-list-icon>dashboard</mat-icon>
+        <a matLine
+           href="#">Dashboard</a>
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content>
-    <mat-toolbar>
+  <mat-sidenav-content perfectScrollbar>
+    <mat-toolbar class="jav-navy-50 nav-toolbar ">
       <button type="button"
               aria-label="Toggle sidenav"
               mat-icon-button
@@ -30,6 +29,8 @@
       </button>
       <span *ngIf="isHandset$ | async">javangular</span>
     </mat-toolbar>
-    <app-dashboard></app-dashboard>
+    <div style="max-height: 100%">
+      <app-dashboard style="margin-top: 200px;"></app-dashboard>
+    </div>
   </mat-sidenav-content>
 </mat-sidenav-container>

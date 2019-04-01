@@ -11,6 +11,11 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "es5",
+    "paths": {
+      "@fuse": [
+        "@javangular/"
+      ]
+    },
     "typeRoots": [
       "node_modules/@types"
     ],
