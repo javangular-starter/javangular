@@ -1,16 +1,7 @@
 [![Dependency Status][daviddm-image]][daviddm-url] 
-[![Build Status](https://travis-ci.com/javangular-starter/javangular.svg?branch=master)](https://travis-ci.com/javangular-starter/javangular)
-[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=bugs)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
-[![Code Smells](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=code_smells)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
-[![Coverage](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=coverage)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
-[![Duplicated Lines (%)](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=duplicated_lines_density)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
-[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=ncloc)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
-[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=alert_status)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
-[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
-[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=security_rating)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
-[![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=sqale_index)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
-[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=javangular-starter_javangular)
+[![Build Status][travis-image]][travis-url]
+[![Quality Gate Status][gate-status-image]][sonar-url]
+
 
 # Javangular
 
@@ -40,10 +31,32 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
-## Analysis of the sample JHipster project
+## Sonar Analysis
 
-[![sonar-quality-gate][sonar-quality-gate]][sonar-url] [![sonar-coverage][sonar-coverage]][sonar-url] [![sonar-bugs][sonar-bugs]][sonar-url] [![sonar-vulnerabilities][sonar-vulnerabilities]][sonar-url]
+[![Bugs][bugs-image]][sonar-url]
+[![Code Smells][code-smells-image]][sonar-url]
+[![Coverage][coverage-image]][sonar-url]
+[![Duplicated Lines (%)][duplicated-image]][sonar-url]
+[![Lines of Code][lines-image]][sonar-url]
+[![Maintainability Rating][maintainability-image]][sonar-url]
+[![Reliability Rating][reliability-image]][sonar-url]
+[![Security Rating][security-image]][sonar-url]
+[![Technical Debt][debt-image]][sonar-url]
+[![Vulnerabilities][vulnerabilities-image]][sonar-url]
 
-
+[bugs-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=bugs 
+[code-smells-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=code_smells 
+[coverage-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=coverage 
+[duplicated-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=duplicated_lines_density 
+[lines-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=ncloc 
+[maintainability-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=sqale_rating
+[gate-status-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=alert_status
+[reliability-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=reliability_rating
+[security-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=security_rating 
+[debt-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=sqale_index 
+[vulnerabilities-image]: https://sonarcloud.io/api/project_badges/measure?project=javangular-starter_javangular&metric=vulnerabilities 
+[sonar-url]: https://sonarcloud.io/dashboard?id=javangular-starter_javangular
 [daviddm-image]: https://david-dm.org/javangular-starter/javangular.svg?theme=shields.io
 [daviddm-url]: https://david-dm.org/javangular-starter/javangular
+[travis-image]: https://travis-ci.com/javangular-starter/javangular.svg?branch=master
+[travis-url]: https://travis-ci.com/javangular-starter/javangular
