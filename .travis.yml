@@ -1,10 +1,11 @@
 sudo: required
+dist: trusty
 addons:
   chrome: stable
   sonarcloud:
-    organization: "javangular-starter" # the key of the org you chose at step #3
+    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
     token:
-      secure: ********* # encrypted value of your token
+      secure: "04a775eb620150d3caabe31255a95480c529ad40" # encrypted value of your token
 
 language: node_js
 node_js:
@@ -21,13 +22,4 @@ script:
   - ng build --prod --aot
   - npm run test-headless
   - ng e2e
-
-
-addons:
-  sonarcloud:
-    organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
-    token:
-      secure: "04a775eb620150d3caabe31255a95480c529ad40" # encrypted value of your token
-script:
-  # other script steps might be done before running the actual analysis
   - sonar-scanner
