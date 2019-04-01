@@ -4,7 +4,6 @@ addons:
   chrome: stable
   sonarcloud:
     organization: "sonarcloud_organization_key" # the key of the org you chose at step #3
-    projectKey: "javangular-starter"
     token:
       secure: "04a775eb620150d3caabe31255a95480c529ad40" # encrypted value of your token
 
