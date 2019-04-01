@@ -1,6 +1,6 @@
 <mat-sidenav-container class="sidenav-container">
   <mat-sidenav #drawer
-               class="sidenav mat-elevation-z12"
+               class="sidenav mat-elevation-z12 bg-jav-500"
                fixedInViewport="true"
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
@@ -9,9 +9,9 @@
       <img class="logo"
            alt="javangular"
            src="assets/logo.svg" />
-      <span>Javangular</span>
+      <span class="logo-title">Javangular</span>
     </mat-toolbar>
-    <mat-nav-list>
+    <mat-nav-list class="bg-jav-500">
       <a mat-list-item
          href="#">Link 1</a>
       <a mat-list-item

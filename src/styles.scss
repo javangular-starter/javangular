@@ -10,11 +10,77 @@
 // Be sure that you only ever include this mixin once!
 @include mat-core();
 
+$jav-nav: (
+  50: #e7e9ea,
+  100: #c4c8cb,
+  200: #9da3a8,
+  300: #757e85,
+  400: #58626b,
+  500: #3a4651,
+  600: #343f4a,
+  700: #2c3740,
+  800: #252f37,
+  900: #182027,
+  A100: #6db6ff,
+  A200: #3a9cff,
+  A400: #0783ff,
+  A700: #0076ec,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #ffffff,
+    400: #ffffff,
+    500: #ffffff,
+    600: #ffffff,
+    700: #ffffff,
+    800: #ffffff,
+    900: #ffffff,
+    A100: #000000,
+    A200: #000000,
+    A400: #ffffff,
+    A700: #ffffff
+  )
+);
+
+$jav-green: (
+  50: #f0f9e7,
+  100: #daf0c3,
+  200: #c2e79b,
+  300: #aadd72,
+  400: #97d554,
+  500: #85ce36,
+  600: #7dc930,
+  700: #72c229,
+  800: #68bc22,
+  900: #55b016,
+  A100: #edffe3,
+  A200: #ceffb0,
+  A400: #aeff7d,
+  A700: #9eff63,
+  contrast: (
+    50: #000000,
+    100: #000000,
+    200: #000000,
+    300: #000000,
+    400: #000000,
+    500: #000000,
+    600: #000000,
+    700: #000000,
+    800: #000000,
+    900: #000000,
+    A100: #000000,
+    A200: #000000,
+    A400: #000000,
+    A700: #000000
+  )
+);
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
-$javangular-primary: mat-palette($mat-indigo);
-$javangular-accent: mat-palette($mat-pink, A200, A100, A400);
+$javangular-primary: mat-palette($jav-nav);
+$javangular-accent: mat-palette($jav-green, A200, A100, A400);
 
 // The warn palette is optional (defaults to red).
 $javangular-warn: mat-palette($mat-red);
@@ -26,8 +92,21 @@ $javangular-theme: mat-light-theme($javangular-primary, $javangular-accent, $jav
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include angular-material-theme($javangular-theme);
-
 /* You can add global styles to this file, and also import other style files */
+
+@mixin colors {
+  $contrast: map-get($jav-nav, contrast);
+
+  @each $name, $value in $jav-nav {
+    .bg-jav-#{$name} {
+      background: #{$value};
+      color: #fff !important;
+    }
+    @debug $name $value;
+  }
+}
+
+@include colors;
 
 html,
 body {
