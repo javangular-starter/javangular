@@ -5,7 +5,7 @@
                [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
                [mode]="(isHandset$ | async) ? 'over' : 'side'"
                [opened]="!(isHandset$ | async)">
-    <mat-toolbar class="jav-navy-400">
+    <mat-toolbar class="jav-navy-400 mat-elevation-z2">
       <img class="logo"
            alt="javangular"
            src="assets/logo.svg" />
@@ -17,20 +17,29 @@
         <a matLine
            href="#">Dashboard</a>
       </mat-list-item>
+      <mat-list-item class="active">
+        <mat-icon mat-list-icon>group</mat-icon>
+        <a matLine
+           href="#">Usuários</a>
+      </mat-list-item>
     </mat-nav-list>
   </mat-sidenav>
-  <mat-sidenav-content perfectScrollbar>
-    <mat-toolbar class="jav-navy-50 nav-toolbar ">
-      <button type="button"
-              aria-label="Toggle sidenav"
-              mat-icon-button
-              (click)="toggleSidebar()">
-        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-      </button>
-      <span *ngIf="isHandset$ | async">javangular</span>
-    </mat-toolbar>
-    <div style="max-height: 100%">
-      <app-dashboard style="margin-top: 200px;"></app-dashboard>
+  <mat-sidenav-content>
+    <!--perfectScrollbar-->
+    <div class="wrapper-header">
+      <mat-toolbar class="jav-navy-50 nav-toolbar mat-elevation-z2">
+        <button type="button"
+                aria-label="Toggle sidenav"
+                mat-icon-button
+                (click)="toggleSidebar()">
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+        </button>
+        <span *ngIf="isHandset$ | async">javangular</span>
+      </mat-toolbar>
+    </div>
+    <div class="wrapper"
+         perfectScrollbar>
+      <app-dashboard></app-dashboard>
     </div>
   </mat-sidenav-content>
 </mat-sidenav-container>
