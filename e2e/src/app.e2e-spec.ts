@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display the app name', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Javangular');
+    expect(page.getText('.logo-title')).toEqual('Javangular');
   });
 
   afterEach(async () => {
